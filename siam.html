@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Jeu de Siam</title>
+  <link rel="icon" href="img/cover.jpg">
+  <link rel="stylesheet" href="./lesStyle/siam.css">
+</head>
+<body>
+
+  <h1>Jeu de Siam</h1>
+  <section id="game">
+    <div id="conteneur">
+      <!-- Plateau -->
+      <div id="board_image">
+        <div id="board" class="cases"></div>
+      </div>
+      <!-- Commandes -->
+      <div id="commandes">
+        <h2 id="tour"></h2>
+        <p>Orienter vers :</p>
+        <button onclick="rotate('up')">⬆️ Haut</button>
+        <button onclick="rotate('left')">⬅️ Gauche</button>
+        <button onclick="rotate('right')">➡️ Droite</button>
+        <button onclick="rotate('down')">⬇️ Bas</button>
+        <button id="endRotation" onclick="finishRotation()" disabled>Terminer la rotation</button>
+        <hr>
+        <button onclick="resetGame()">Réinitialiser le jeu</button>
+        <a id="regles" target="_blank" href="./rules/92ca7d_21a266c24b9a47acb695d974b94541b5.pdf">rules</a>
+      </div>
+    </div>  
+  </section>
+  <script src="./lesProgrammes/partie.js"></script>
+</body>
+</html>

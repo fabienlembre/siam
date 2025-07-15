@@ -1,0 +1,210 @@
+body {
+  text-align: center;
+  background-image: url(../img/cover.jpg);
+  background-repeat: space;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+h1{
+  font-size: 50px;
+  margin-left: 20vw;
+  width: 50vw;
+  font-family: "Impact", "Arial Black", sans-serif; 
+  color: #2e7d32; 
+  text-shadow: 2px 2px 5px #000, 0px 0px 10px rgba(34, 139, 34, 0.7); 
+  text-align: center;
+  margin-bottom: 20px;
+  background-color: rgba(185, 233, 217, 0.719);
+  border: #301f5f96  solid;
+  border-radius: 40px;
+}
+
+/* Conteneur principal pour le plateau et les commandes */
+#conteneur {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  /* Espacement entre le plateau et les commandes */
+}
+
+/* Section des commandes */
+#commandes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 2px solid #ccc;
+  border-radius: 30px;
+  margin-top: 220px;
+  padding: 20px;
+  width: 200px;
+}
+
+#commandes h2 {
+  margin-bottom: 15px;
+  color: #420303;
+  font-size: 20px;
+}
+
+#commandes button {
+  margin: 5px 0;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+#commandes button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+  /* Léger effet de zoom au survol */
+}
+
+#commandes hr {
+  width: 100%;
+  border: 1px solid #301f5f96;
+  margin: 15px 0;
+}
+
+#commandes p {
+  font-size: 20px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+#commandes button:disabled {
+  background-color: #cccccc;
+  color: #666666;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Animation pour les boutons */
+@keyframes button-press {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(0.95);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+#commandes button:active {
+  animation: button-press 0.2s;
+}
+
+#board_image {
+  margin-bottom: 1cm;
+  background-size: cover;
+  background-image: url(../img/plateau.jpg);
+  background-repeat: no-repeat;
+}
+
+#board {
+  padding-top: 19.5mm;
+  padding-left: 7mm;
+  padding-right: 8mm;
+  padding-bottom: 19mm;
+  display: grid;
+  grid-template-columns: repeat(5, 30mm);
+  grid-template-rows: repeat(5, 30mm);
+  gap: 9px;
+}
+
+.cell {
+  width: 31mm;
+  height: 31mm;
+  display: flex;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.player1 {
+  color: blue;
+}
+
+.player2 {
+  color: red;
+}
+
+.clCliquable {
+  border: rgb(23, 71, 0) dashed 2px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+@keyframes glow {
+
+  0%,
+  100% {
+    box-shadow: 0 0 5px rgba(23, 71, 0, 0.5);
+  }
+
+  50% {
+    box-shadow: 0 0 20px rgba(23, 71, 0, 1);
+  }
+}
+
+.clSelection {
+  border: red dashed 2px;
+  border-radius: 4px;
+  animation: glow 1.5s infinite;
+  /* Effet lumineux cyclique */
+}
+
+.right {
+  transform: rotate(90deg);
+}
+
+.down {
+  transform: rotate(180deg);
+}
+
+.left {
+  transform: rotate(270deg);
+}
+
+.up {
+  transform: rotate(0deg)
+}
+
+a#regles{
+  margin: 5px 0;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  transition: background-color 0.3s, transform 0.2s;
+}
+a#regles,a:visited,a:active{
+  margin: 5px 0;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  transition: background-color 0.3s, transform 0.2s;
+  text-decoration: none;
+}
+
+a:hover#regles{
+  background-color: #0056b3;
+  transform: scale(1.05);
+  /* Léger effet de zoom au survol */
+}
